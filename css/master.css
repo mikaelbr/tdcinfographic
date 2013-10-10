@@ -1,0 +1,687 @@
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #262626;
+    position: relative;
+    /*overflow-x: hidden;*/
+    min-width: 1100px;
+    height: 100%;
+
+    font-family: "Fedra Serif B Book",Georgia;
+    /*line-height: 20px;*/
+    font-size: 14px;
+    color: #f1f1f1;
+
+    -webkit-font-smoothing: antialiased;
+    /*-webkit-overflow-scrolling: touch;*/
+
+    /*min-height: 600px;*/
+}
+
+
+.logo {
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #111;
+    color: rgba(0, 0, 0, 0);
+
+    position: absolute;
+    z-index: 20;
+    top: 20px;
+    left: 50%;
+    margin-left: -37px;
+
+    height: 17px;
+    width: 75px;
+    
+    /*background-image: url("../media/bekk-logo-white.png");*/
+    background-image: url("../media/BEKK_logo.svgz");
+    /*background-image: url(http://open.bekk.no/Content/Images/BEKK_logo.svgz);*/
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sitetitle {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -110px auto;
+    width: 200px;
+    height: 200px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    /*background-image: url("../media/uxcup2014-logo-transparent.png");*/
+    /*background-image: url("../media/uxcup2014-logo.svgz");*/
+    background-image: url("../media/uxcup2014-love-logo.svgz");
+    background-size: 200px 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.headergfx {
+    width: 100%;
+    /*height: 60%;*/
+    height: 400px;
+    padding: 0;
+    position: relative;
+    top: 0;
+    background-color: #f1f1f1;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+    .headergfx.raster:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../media/raster.png");
+        background-repeat: repeat;
+        pointer-events: none;
+    }
+
+    .headergfx.vippetangen {
+        background-image: url("../media/trondheim.jpg");
+    }
+
+        .headergfx.canvas canvas {
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 1;
+        }
+
+    .headergfx.video {
+    }
+        .headergfx.video video {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+
+    .headergfx.iframe {
+    }
+        .headergfx.iframe iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+
+
+
+
+
+
+/**
+ * Sections
+ */
+
+.sectionswrap {
+    /*position: relative;*/
+    width: 1100px;
+    margin: 200px auto 0 auto;
+}
+
+.sectionswrap:after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #3c3c3c;
+    position: absolute;
+    left: 0;
+}
+
+.sections {
+    overflow: hidden;
+    width: 1140px;
+    margin-left: -20px;
+    padding-bottom: 20px;
+}
+
+.section {
+    float: left;
+    width: 33.33%;
+    padding: 0 20px 0 20px;
+    margin: 0 0 0 0;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.wholesectionlink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.sectiontitle {
+    float: left;
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+
+    font-size: 16px;
+    font-family: 'Conduit ITC W01 Light', Arial, sans-serif;
+    line-height: 24px;
+    background-color: #847E7E;
+    padding: 4px 13px;
+}
+
+.sectioncontent {
+    clear: both;
+    overflow: hidden;
+
+    margin-left: -20px;
+    padding-left: 20px;
+
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+
+    border-left: 1px solid #3c3c3c;
+}
+    .section:first-of-type .sectioncontent {
+        border-left: 0;
+    }
+
+
+/**
+ * Qualifications
+ */
+.qualification .sectiontitle {
+    background-color: #297F79;
+}
+
+    .qualificationevents {
+        overflow: auto;
+    }
+
+    .qualificationevent {
+        float: left;
+        width: 33.33%;
+        padding-left: 5px;
+
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .qualificationevent:first-of-type {
+        padding-left: 0;
+    }
+        .qualificationevent .eventlink {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            border: 1px solid #3c3c3c;
+
+            color: #f1f1f1;
+            font-family: 'Conduit ITC W01 Light', Arial, sans-serif;
+
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+        }
+            .qualificationevent .eventlink:hover,
+            .qualificationevent .eventlink:active {
+                background-color: #f1f1f1;
+                color: #1f1f1f;
+                border-color: #f1f1f1;
+            }
+
+        .qualificationevent .school,
+        .qualificationevent .time,
+        .qualificationevent .location {
+            display: block;
+        }
+
+        .qualificationevent .school {
+            font-size: 0.82em;
+        }
+
+        .qualificationevent .time {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .qualificationevent .location {
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+
+    .signup {
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+        padding: 10px;
+        padding-top: 10px;
+        border: 0;
+
+        background-color: #f1f1f1;
+        color: #1f1f1f;
+
+        font-family: 'Conduit ITC W01 Light',Arial;
+    }
+        .signup .signuplabel {
+            display: block;
+            text-align: center;
+
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .signup .signuptime {
+            display: block;
+            margin: 0 auto;
+            width: 70%;
+            border-bottom: 1px solid #999;
+            padding-bottom: 5px;
+
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+            .signup .signuptime .time {
+                font-weight: normal;
+                font-size: 14px;
+            }
+
+        .signup .signuptitle {
+            margin-top: 10px;
+            padding-bottom: 5px;
+            text-align: center;
+            
+            font-family: "Fedra Serif B Book",Georgia;
+            font-style: italic;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+            .signup:hover .signuptitle {
+                color: #297F79;
+            }
+
+        .signup .signuplink {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            top: 0;
+            left: 0;
+            white-space: nowrap;
+            text-indent: 100%;
+            overflow: hidden;
+        }
+
+    /**
+     * "Vinnerene kåres den..."
+     */
+    .finalistspubdate {
+        clear: both;
+        padding: 25px 20px 20px 20px;
+        margin-top: 20px;
+
+        background-color: #f1f1f1;
+        color: #1f1f1f;
+    }
+        .finalistspubdate .teamscount, 
+        .finalistspubdate .datetext {
+            display: block;
+        }
+
+        .finalistspubdate .datetext {
+            font-style: italic;
+            font-size: 14px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .finalistspubdate .teamscount {
+            font-size: 12px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #999;
+            width: 70%;
+            margin: 0 auto 10px auto;
+        }
+
+
+
+/**
+ * Final
+ */
+.final .sectiontitle {
+    background-color: #FD5158;
+}
+
+    .infoline {
+        position: relative;
+        width: 70%;
+        float: left;
+        margin-bottom: 10px;
+
+        font-family: 'Conduit ITC W01 Light',Arial;
+
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        
+    }
+        .infoline:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            
+            background-color: #3c3c3c;
+            border-right: 10px solid #262626;
+
+            -webkit-box-sizing: border-box;
+               -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+            
+        }
+        .infoline:nth-child(2n):after {
+            border-right: 0;
+            border-left: 10px solid #262626;
+        }
+        .infoline:nth-child(2n) {
+            padding-left: 10px;
+        }
+        .infoline .number {
+            font-size: 100px;
+            line-height: 100%;
+            color: #FD5158;
+            vertical-align: baseline;
+            padding-top: 10px;
+        }
+
+        .infoline .label {
+            text-transform: uppercase;
+            color: #f1f1f1;
+            margin-left: 10px;
+
+            vertical-align: baseline;
+        }
+
+
+        .infoline .edit {
+            position: absolute;
+            top: -8px;
+            left: 55px;
+            z-index: 1000;
+
+            font-family: 'Cedarville Cursive', cursive;
+            color: white;
+        
+            font-size: 26px;
+
+            -webkit-transform: rotate(-30deg);
+            -moz-transform: rotate(-30deg);
+            -o-transform: rotate(-30deg);
+            -ms-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+        }
+        .infoline .edit.edit2 {
+            left: 30px;
+            top: -5px
+        }
+
+    .infoline .edit:before {
+        content: "/";
+        position: absolute;
+        left: -40px;
+        top: -8px;
+        font-size: 50px;
+        font-weight: normal;
+        
+        -webkit-transform: rotate(50deg);
+        -moz-transform: rotate(50deg);
+        -o-transform: rotate(50deg);
+        -ms-transform: rotate(50deg);
+        transform: rotate(50deg);
+
+        text-shadow: 1px 0 0 rgba(0, 0, 0, 0.5);
+    }
+    .infoline .edit.edit2:before {
+        left: -35px;
+    }
+
+    .finalevent {
+        clear: both;
+        padding-top: 20px;
+
+        font-family: 'Conduit ITC W01 Light',Arial;
+    }
+        .finalevent .time {
+            display: block;
+            
+            line-height: 100%;
+            font-size: 40px;
+            font-weight: normal;
+            text-align: center;
+        }
+        .finalevent .location {
+            display: block;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 7px;
+        }
+
+/**
+ * News
+ */
+.section.sociallinks {
+    width: 33.34%;
+}
+    .sociallinks .sectiontitle {
+
+    }
+
+    .sociallink {
+        margin-bottom: 10px;
+        display: block;
+        padding-left: 40px;
+        line-height: 32px;
+        height: 32px;
+        background-size: 32px 32px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        border: 0;
+    }
+    .sociallink.facebooklink {
+        background-image: url("../media/facebook-turquoise.svgz");
+    }
+        .sociallink.facebooklink:hover,
+        .sociallink.facebooklink:focus {
+            background-image: url("../media/facebook-white.svgz");   
+        }
+    .sociallink.twitterlink {
+        background-image: url("../media/twitter-turquoise.svgz");
+    }
+        .sociallink.twitterlink:hover,
+        .sociallink.twitterlink:focus {
+            background-image: url("../media/twitter-white.svgz");   
+        }
+    .sociallink.maillink {
+        background-image: url("../media/mail-turquoise.svgz");
+    }
+        .sociallink.maillink:hover,
+        .sociallink.maillink:focus {
+            background-image: url("../media/mail-white.svgz");   
+        }
+    .sociallink.uxcuplink {
+        background-image: url("../media/uxcup2013-pink.svgz");
+    }
+        .sociallink.uxcuplink:hover,
+        .sociallink.uxcuplink:focus {
+            background-image: url("../media/uxcup2013-white.svgz");   
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Profiles
+ */
+.profileimages {
+    overflow: auto;
+    margin: 20px -10px 0 -10px;
+}
+
+    .profileimageslabel {
+        /*visibility: hidden;*/
+        display: block;
+        font-family: 'Conduit ITC W01 Light',Arial;
+        font-size: 14px;
+        color: #939393;
+        padding-left: 10px;
+    }
+        /*.profileimages:hover .profileimageslabel {
+            visibility: visible;
+        }*/
+
+    .profile {
+        float: left;
+        margin: 10px 10px 0 10px;
+    }
+
+    .profileimage {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+    }
+
+    .profilename {
+        display: block;
+        text-align: center;
+        font-family: 'Conduit ITC W01 Light',Arial;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+
+
+.page.price {
+    padding-top: 160px;
+}
+
+.page.price .pagecontents {
+}
+
+.priceimagecontainer {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    background-color: #f1f1f1;
+    background-image: url("../media/lisboa.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+    .priceimage {
+        visibility: hidden;
+        width: 100%;
+    }
+
+    .priceimagecontainer:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../media/raster.png");
+        background-repeat: repeat;
+    }
+
+    .pricebox {
+        background-color: #1f1f1f;
+
+        /*font-family: 'Conduit ITC W01 Light',Arial;*/
+        color: #f1f1f1;
+    }
+
+.uxlxlogo {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url("../media/uxlx_logo.png");
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 140px;
+    padding: 0;
+    float: right;
+    margin-left: 20px;
+}
+
+
+.footersociallinks {
+    padding: 25px 0 15px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+    .footersociallinks .sociallink {
+        display: inline-block;
+        width: 0;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: 0 15px 10px 15px;
+    }
+
+        .footersociallinks .sociallink.facebooklink:hover,
+        .footersociallinks .sociallink.facebooklink:focus {
+            background-image: url("../media/facebook-black.svgz");   
+        }
+
+        .footersociallinks .sociallink.twitterlink:hover,
+        .footersociallinks .sociallink.twitterlink:focus {
+            background-image: url("../media/twitter-black.svgz");   
+        }
+
+        .footersociallinks .sociallink.maillink:hover,
+        .footersociallinks .sociallink.maillink:focus {
+            background-image: url("../media/mail-black.svgz");   
+        }

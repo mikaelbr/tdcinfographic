@@ -1,0 +1,140 @@
+html, body {
+	width: 100%;
+	min-width: 0px;
+	max-width: auto;
+	width: 100%;
+	/*-webkit-overflow-scrolling: touch;*/
+}
+
+body {
+
+}
+
+.sectionswrap {
+    width: 100%;
+}
+
+.mapwrap {
+}
+	.maplabels {
+		background-color: #f1f1f1;
+		color: #1f1f1f;
+		padding: 40px 20px;
+	}
+
+	.maptimeline {
+        display: none;
+	}
+
+	.mapwrap .map {
+		display: none;
+	}
+	.mapwrap .maplinewrap {
+		display: none;
+	}
+
+	.mapwrap .maptextblock {
+		position: static;
+		margin-bottom: 40px;
+		clear: both;
+	}
+
+	.mapwrap .maplabel {
+		position: static;
+		margin-bottom: 40px;
+		float: left;
+		width: 33.33%;
+		padding-right: 20px;
+	
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.maplabel .date {
+		font-family: 'Conduit ITC W01 Light', Arial, sans-serif;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+
+	.maplabel .city {
+		font-family: 'Conduit ITC W01 Light', Arial, sans-serif;
+		padding-right: 0;
+		text-transform: uppercase;
+		font-size: 0.9em;
+	}
+		.maplabel .city .location {
+			font-weight: bold;
+			color: #666;
+			text-transform: none;
+			font-size: 1.1em;
+			margin-left: 10px;
+		}
+
+	.maplabel .schools {
+		margin-top: 10px;
+		font-family: Georgia, serif;
+		font-style: italic;
+	}
+
+	.maplabel.final {
+		clear: both;
+		position: relative;
+		top: 70px;
+		left: 0;
+		margin-top: 50px;
+		padding-left: 0;
+	}
+
+	.maptextblock.final h2 {
+		position: relative;
+		top: -65px;
+	}
+
+.profileimageslabel {
+	color: #666;
+}
+
+.page .pagecontents {
+	width: 100%;
+}
+
+.colwrapper {
+	width: 100%;
+	margin-left: 0;
+}
+
+.sections {
+	width: 100%;
+	padding-bottom: 0;
+	margin-left: 0;
+	border-bottom: 1px solid #3c3c3c;
+}
+
+.section {
+	width: 50%;
+}
+
+	.section.sociallinks {
+		width: 100%;
+		margin-top: 75px;
+		padding-bottom: 20px;
+		clear: both;
+		background-color: #272727;
+		text-align: center;
+	}
+		.section.sociallinks .sectiontitle {
+			display: inline-block;
+			float: none;
+		}
+
+		.section.sociallinks .sectioncontent {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			text-align: center;
+		}
+
+	.section.sociallinks .sociallink {
+		display: inline-block;
+		margin: 10px 20px;
+	}

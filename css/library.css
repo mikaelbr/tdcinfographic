@@ -1,0 +1,165 @@
+
+
+a {
+	color: inherit;
+	border-bottom: 1px solid #1f1f1f;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	border-color: #FD5158;
+}
+
+h2 {
+	font-size: 20px;
+	text-transform: uppercase;
+	word-spacing: 0.15em;
+}
+
+h3 {
+	line-height: 150%;
+	color: #3c3c3c;
+	font-size: 16px;
+	font-family: 'Conduit ITC W01 Light',Arial;
+}
+
+	h3 a {
+		border: 0;
+	}
+
+.supplementary {
+	font-size: 80%;
+	vertical-align: baseline;
+	margin-left: 10px;
+	color: #666;
+}
+
+p {
+	line-height: 150%;
+	word-wrap: break-word;
+	margin-bottom: 1em;
+}
+
+p + p {
+	text-indent: 0;
+}
+
+
+
+
+.page {
+    position: relative;
+    z-index: 2;
+    clear: both;
+    width: 100%;
+    padding: 40px 0;
+
+    background-color: #f1f1f1;
+    color: #1f1f1f;
+}
+
+.page .pagecontents {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.qualificationtext {
+	color: #297F79;
+}
+	a.qualificationtext {
+		color: inherit;
+		border-color: #297F79;
+	}
+	a.qualificationtext:hover, a.qualificationtext:focus {
+		color: #297F79;
+		border-color: #3c3c3c;
+	}
+
+	.qualificationsignuplink {
+		padding-top: 10px;
+	}
+
+.finaltext {
+	color: #FD5158;
+}
+
+
+
+.contentsegment {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #999;
+	margin-bottom: 20px;
+	position: relative;
+}
+	.contentsegment:target:before {
+		content: "•";
+		position: absolute;
+		left: -20px;
+		font-size: 20px;
+		line-height: 20px;
+		/*top: 50%;
+		margin-top: -10px;*/
+		top: 3px;
+		color: #FD5158;
+	}
+	.contentsegment:target {
+		border-bottom-color: #FD5158;
+	}
+	.contentsegment:target .qualificationtext, 
+	.contentsegment:target .finaltext {
+		color: #FD5158;
+	}
+
+
+
+
+/**
+ * Columns
+ */
+
+
+.colwrapper {
+	width: 1140px;
+	margin-left: -20px;
+	overflow: auto;
+}
+
+.fullcol, .halfcol, .onethirdcol, .twothirdscol, .onesixthcol {
+	padding: 20px;
+	float: left;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.leftcol {
+	padding-left: 0;
+}
+.rightcol {
+	padding-right: 0;
+}
+
+.fullcol {
+	width: 100%;
+	float: left;
+}
+
+.halfcol {
+	width: 50%;
+}
+
+.onethirdcol {
+	width: 33.33%;
+}
+
+.twothirdscol {
+	width: 66.67%;
+}
+
+.onesixthcol {
+	width: 16.66%;
+}

@@ -1,0 +1,53 @@
+
+html, body {
+	
+}
+
+.headergfx {
+	height: 200px;
+}
+
+.sections {
+	width: 100%;
+	padding-bottom: 0;
+	margin-left: 0;
+}
+
+.sections .section {
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+.section.sociallinks .sectiontitle {
+	float: left;
+	display: block;
+}
+
+.section.sociallinks {
+	margin-top: 0;
+}
+
+.sectioncontent {
+	border-left: none;
+}
+
+.qualificationevent .school {
+	font-size: 0.65em;
+}
+
+.section.sociallinks .sectioncontent {
+	text-align: left;
+}
+
+.section.sociallinks .sociallink {
+	display: block;
+}
+
+.halfcol {
+	width: 100%;
+}
+
+.mapwrap .maplabel {
+	width: 100%;
+	padding: 0;
+}

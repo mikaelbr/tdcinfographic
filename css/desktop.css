@@ -1,0 +1,246 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.sectionswrap {
+    height: 295px;
+}
+
+
+/** Map **/
+
+.mapwrap {
+    height: 7500px;
+    position: relative;
+    display: block;
+}
+
+/* Org source: http://commons.wikimedia.org/wiki/File:Europe_continents_black.svg */
+.map {
+    width: 1600px;
+    height: 1548px;
+    /*background-image: url("../media/europe-turquoise.png");
+    background-position: right top;*/
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -300px;
+}
+
+    .maptimeline {
+        position: fixed;
+        z-index: 10;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        height: 40px;
+        background-color: #1f1f1f;
+        border-top: 1px solid #3c3c3c;
+
+        font-family: "Conduit ITC W01 Light", Arial, sans-serif;
+
+        display: none;
+    }
+        .maptimelineprogress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 40px;
+            width: 0px;
+            background-color: #FD5158;
+        }
+
+        .maptimeline .timelabel {
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            position: absolute;
+            display: block;
+            top: 0;
+            padding: 0 10px;
+            margin-left: -30px;
+        }
+
+    .maplabels {
+        width: 1100px;
+        height: 1548px;
+        margin: 0 auto;
+        position: relative;
+        opacity: 0;
+    }
+
+    .maptextblock {
+        width: 366px;
+        position: absolute;
+        background-color: #1f1f1f;
+        padding: 20px;
+        margin-top: 20px;
+        top: 0;
+        left: 50%;
+        margin-left: -570px;
+        overflow: hidden;
+    }
+
+        .maptextblock.signup {
+            background-color: #f1f1f1;
+            color: #1f1f1f;
+            top: 400px;
+            position: fixed;
+        }
+
+
+
+    .maplabel {
+        border-top: 1px solid #f1f1f1;
+        position: absolute;
+        width: 100%;
+        right: 50%;
+        margin-right: -550px;
+        
+        font-family: "Conduit ITC W01 Light", Arial, sans-serif;
+    }
+    .maplabel:after {
+        content: '';
+        display: block;
+        border-radius: 50%;
+        background-color: #f1f1f1;
+        height: 8px;
+        width: 8px;
+        right: 0;
+        top: -4px;
+        position: absolute;
+        z-index: 2;
+    }
+
+        .maplabel.final {
+            border-color: #f1f1f1;
+        }
+        .maplabel.final:after {
+            background-color: #f1f1f1;
+            width: 14px;
+            height: 14px;
+            top: -7px;
+            right: -3px;
+        }
+
+        .maplabel.oslo {
+            top: 265px;
+            max-width: 830px;  /*575 + 255 */
+
+            -webkit-transform: translateX(-270px);
+            -moz-transform: translateX(-270px);
+            -ms-transform: translateX(-270px);
+            transform: translateX(-270px);
+        }
+
+        .maplabel.gothenburg {
+            top: 336px;
+            max-width: 869px;
+
+            -webkit-transform: translateX(-243px);
+            -moz-transform: translateX(-243px);
+            -ms-transform: translateX(-243px);
+            transform: translateX(-243px);
+        }
+
+        .maplabel.trondheim {
+            top: 128px;
+            max-width: 830px;  /*575 + 255 */
+
+            -webkit-transform: translateX(-270px);
+            -moz-transform: translateX(-270px);
+            -ms-transform: translateX(-270px);
+            transform: translateX(-270px);
+        }
+
+    .maplinewrap {
+        display: none;
+        position: fixed;
+        right: 50%;
+        margin-right: -550px;
+        z-index: 1;
+
+        -wekbit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+        .maplinewrap.oslo-gothenburg {
+            top: 265px;
+            padding-right: 247px;
+            /*width: 27px;
+            height: 71px;*/
+        }
+        .maplinewrap.gothenburg-trondheim {
+            top: 128px;
+            padding-right: 247px;
+        }
+        .maplinewrap.oslo-trondheim {
+            top: 132px;
+            padding-right: 271px;
+        }
+        .maplinewrap.oslo-lisboa {
+            top: 265px;
+            padding-right: 271px;
+        }
+
+    .mapdot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #f1f1f1;
+        position: fixed;
+        left: 50%;
+        margin-left: -550px;
+        display: none;
+        opacity: 0;
+    }
+        .mapdot.lisboa {
+            top: 273px;
+            -webkit-transform: translateX(253px);
+            -moz-transform: translateX(253px);
+            -ms-transform: translateX(253px);
+            transform: translateX(253px);
+        }
+
+    .maplabel .anchor {
+        margin-top: -100px;
+        position: absolute;
+    }
+
+    .maplabel .date {
+        line-height: 20px;
+        font-size: 1.1em;
+        margin-top: -22px;
+        font-weight: bold;
+    }
+        .maplabel .date .time {
+            font-weight: normal;
+        }
+
+    .maplabel .city {
+        margin-top: 4px;
+        text-transform: uppercase;
+        color: #939393;
+        font-size: 0.9em;
+    }
+        .maplabel .city .location {
+            color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+    .maplabel .schools {
+        font-family: Georgia, serif;
+        font-style: italic;
+        margin-top: 50px;
+    }
+
+.page.price {
+    position: relative;
+    z-index: 11;
+}
+.footersociallinks {
+    position: relative;
+    z-index: 11;
+}
