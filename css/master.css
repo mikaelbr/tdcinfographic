@@ -54,9 +54,6 @@ html, body {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-    /*background-image: url("../media/uxcup2014-logo-transparent.png");*/
-    /*background-image: url("../media/uxcup2014-logo.svgz");*/
-    background-image: url("../media/uxcup2014-love-logo.svgz");
     background-size: 200px 200px;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,7 +62,7 @@ html, body {
 .headergfx {
     width: 100%;
     /*height: 60%;*/
-    height: 400px;
+    height: 250px;
     padding: 0;
     position: relative;
     top: 0;
