@@ -37,8 +37,8 @@ html, body {
     width: 75px;
     
     /*background-image: url("../media/bekk-logo-white.png");*/
-    background-image: url("../media/BEKK_logo.svgz");
-    /*background-image: url(http://open.bekk.no/Content/Images/BEKK_logo.svgz);*/
+    background-image: url("../media/bekk-logo-white.png");
+    /*background-image: url(http://open.bekk.no/Content/Images/BEKK_logo.png);*/
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -512,32 +512,32 @@ html, body {
         border: 0;
     }
     .sociallink.facebooklink {
-        background-image: url("../media/facebook-turquoise.svgz");
+        background-image: url("../media/facebook-turquoise.png");
     }
         .sociallink.facebooklink:hover,
         .sociallink.facebooklink:focus {
-            background-image: url("../media/facebook-white.svgz");   
+            background-image: url("../media/facebook-white.png");   
         }
     .sociallink.twitterlink {
-        background-image: url("../media/twitter-turquoise.svgz");
+        background-image: url("../media/twitter-turquoise.png");
     }
         .sociallink.twitterlink:hover,
         .sociallink.twitterlink:focus {
-            background-image: url("../media/twitter-white.svgz");   
+            background-image: url("../media/twitter-white.png");   
         }
     .sociallink.maillink {
-        background-image: url("../media/mail-turquoise.svgz");
+        background-image: url("../media/mail-turquoise.png");
     }
         .sociallink.maillink:hover,
         .sociallink.maillink:focus {
-            background-image: url("../media/mail-white.svgz");   
+            background-image: url("../media/mail-white.png");   
         }
     .sociallink.uxcuplink {
-        background-image: url("../media/uxcup2013-pink.svgz");
+        background-image: url("../media/uxcup2013-pink.png");
     }
         .sociallink.uxcuplink:hover,
         .sociallink.uxcuplink:focus {
-            background-image: url("../media/uxcup2013-white.svgz");   
+            background-image: url("../media/uxcup2013-white.png");   
         }
 
 
@@ -670,15 +670,15 @@ html, body {
 
         .footersociallinks .sociallink.facebooklink:hover,
         .footersociallinks .sociallink.facebooklink:focus {
-            background-image: url("../media/facebook-black.svgz");   
+            background-image: url("../media/facebook-black.png");   
         }
 
         .footersociallinks .sociallink.twitterlink:hover,
         .footersociallinks .sociallink.twitterlink:focus {
-            background-image: url("../media/twitter-black.svgz");   
+            background-image: url("../media/twitter-black.png");   
         }
 
         .footersociallinks .sociallink.maillink:hover,
         .footersociallinks .sociallink.maillink:focus {
-            background-image: url("../media/mail-black.svgz");   
+            background-image: url("../media/mail-black.png");   
         }

@@ -1,0 +1,22 @@
+{
+  "name": "tdcinfographic",
+  "version": "0.1.0",
+  "description": "A infographics application for Bekk at Trondheim Developer Conference\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikaelbr/tdcinfographic.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/mikaelbr/tdcinfographic/issues"
+  },
+  "dependencies": {
+    "ecstatic": "~0.4.11",
+    "socket.io": "~0.9.16"
+  }
+}
