@@ -2,7 +2,7 @@ define(function() {
 	
 	// Analytics
 	window._gaq = window._gaq || [];
-	_gaq.push(['_setAccount', 'UA-35646356-1']);
+	// _gaq.push(['_setAccount', 'UA-35646356-1']);
 	_gaq.push(['_trackPageview']);
 
 	(function() {

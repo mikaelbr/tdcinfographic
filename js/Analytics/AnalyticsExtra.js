@@ -1,45 +1,26 @@
-define(["Analytics/Analytics", "lib/mootools-core", "lib/mootools-more", "lib/MooHashChange", "domReady!"], function(_gaq) {
+define(["Analytics/Analytics", "jquery"], function(_gaq, $) {
 
-	$$("a").each(function(a) {
-		a.addEvent("click", function(e) {
-			var href = a.get("href");
-			var uri = href.toURI();
+	$("document").on("click", "a", function(e) {
+		var href = $(this).attr("href");
 
-			// Mailto
-			if(uri.get("scheme") === "mailto") {
-				trackEvent("Email", "signup");
-				return;
-			}
+		// Mailto
+		if(href.indexOf("mailto") === 0) {
+			trackEvent("Email", "signup");
+			return;
+		}
 
-			// Social media
-			["twitter.com", "facebook.com"].each(function(media) {
-				if(uri.get("host").contains(media)) {
-					trackEvent("Social", media);
-				}
-			});
-
-			// External links (also catches social media)
-			if(uri.get("host") !== window.location.hostname) {
-				trackEvent("External", uri.toString());
-			}
-			else if(!uri.get("fragment")) {
-			// Internal links, except anchors: last years winners
-				trackEvent("Internal", uri.toString());
+		// Social media
+		["twitter.com", "facebook.com"].each(function(media) {
+			if(href.indexOf(media) !== -1) {
+				trackEvent("Social", media);
 			}
 		});
+
+		// External links (also catches social media)
+		if(href.indexOf(window.location.hostname) === -1) {
+			trackEvent("External", href);
+		}
 	});
-
-	// On in page anchor change
-	window.addEvent("hashchange", function(e) {
-		var url = ("" + window.location).toURI();
-		trackEvent("Anchor", url.get("fragment"));
-	});
-
-	// Animation clicks
-	$("bekkuxjam").addEvent("click", function(e) {
-		trackEvent("Play", "balls");
-	})
-
 
 	var trackEvent = function(category, label) {
 		try {
@@ -52,5 +33,5 @@ define(["Analytics/Analytics", "lib/mootools-core", "lib/mootools-more", "lib/Mo
 		catch (err) {
 			console.err(err);
 		}
-	}
+	};
 });
