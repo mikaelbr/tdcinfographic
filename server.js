@@ -16,11 +16,10 @@ var io = require('socket.io').listen(server);
 var w = require("./lib/weight");
 
 // Proof of concept.
-setInterval(function () {
-	w().stdout.on('data', function (data) {
-		// Broadcast kilograms to all listeners.
-		io.sockets.emit("data", data.toString());
-	})
-}, 1000);
+w().stdout.on('data', function (data) {
+	// Broadcast kilograms to all listeners.
+	io.sockets.emit("data", data.toString());
+});
+
 
 server.listen(process.env.PORT || 3000);
