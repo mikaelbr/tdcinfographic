@@ -37,7 +37,7 @@ require(["socketio", "raphael", "underscore", "jquery"], function(io, Raphael, _
 
 	var $indiNum = $('#number-individual');
 	
-	var socket = io.connect('http://localhost');
+	var socket = io.connect();
 	socket.on("data", function (data) {
 		var y = parseFloat(data.toString(), 10);
 		var nHeight = size.height - y;
