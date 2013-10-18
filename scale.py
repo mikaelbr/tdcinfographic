@@ -69,7 +69,7 @@ def grabData(dev):
             try:
                 data = dev.read(endpoint.bEndpointAddress,
                                    endpoint.wMaxPacketSize)
-                print data
+                
             except usb.core.USBError as e:
                 data = None
                 if e.args == ('Operation timed out',):
