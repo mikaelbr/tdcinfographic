@@ -2,7 +2,6 @@ var http = require('http');
 var fs = require('fs');
 
 var ecstatic = require('ecstatic');
-var io = require('socket.io').listen(server);
 
 var server = http.createServer(ecstatic({
     root: __dirname + '/public',
