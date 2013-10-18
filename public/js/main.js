@@ -5,89 +5,72 @@ requirejs.config({
         'socketio': '../socket.io/socket.io',
         'raphael': 'lib/raphael',
         'underscore': 'lib/underscore',
+        'bacon': 'lib/bacon',
     },
     shim : {
-    	'socketio': {
-	      exports: 'io'
-	    },
-	    'underscore': {
-	      exports: '_'
-	    }
+        'socketio': {
+          exports: 'io'
+        },
+        'underscore': {
+          exports: '_'
+        },
+        'bacon': ['jquery']
     }
 });
 
-var size = {
-    width: 330,
-    height: 350
-};
+require([
+      "socketio"
+    , "underscore"
+    , "jquery"
+    , "bacon"
+    , "graphs"
+    , "size"
+    ]
+    , function(io, _, $, Bacon, graph, size) {
 
-/****
- * NOTE: Quick and really dirty proof of concept/example for graphing.
- * Should rewrite massivly, but it'll work as an example.
- *****/
-require(["socketio", "raphael", "underscore", "jquery"], function(io, Raphael, _, $) {
-	var maxWeight = 4000;
+    // Initiate helpers
+    var maxWeight = 40000
+      , socket = io.connect()
+      , $indiNum = $('#number-individual')
+      , $totalNum = $('#number-total')
+      , sampleButton = $('#sample').asEventStream('click')
+      , toFitMaxKilos = function (total) { return (total / maxWeight) * size.height; }
+      , add = function(a, b) { return a + b; }
+      , setHeightOf = function (el) {
+        return function (weight) {
+            el.animate({
+                y: size.height - weight,
+                height: weight
+            }, 200, "easeIn");
+        };
+    };
 
-	var total = 0;
-	var totalGrams = 0;
+    // Handle current weight
+    var incremented = Bacon
+                        .fromEventTarget(socket, 'grams')
+                        .filter(_.isNumber)
+                        .map(Number);
 
-	var paper = Raphael("graph-individual", size.width, size.height),
-		indi = paper.rect(0, size.height, size.width, 0);
-    
-    var papertotal = Raphael("graph-total",size.width,size.height);
-		var rect = papertotal.rect(0, 0, 330, 350);
-		rect.attr("fill", "#636363");
-		totalGraph = papertotal.rect(0,size.height,size.width,0);
+    // Update graph
+    incremented.onValue(setHeightOf(graph.currentWeight));
+
+    // Update text for total weight
+    incremented.assign($indiNum, "text");
 
 
-	// Color the rectangle nicely
-	indi.attr({
-	    fill:'#dadada',
-	    stroke:'none'
-	});
+    // Handle total weight.
+    var totalWeight = incremented
+                        .toProperty("")
+                        .sampledBy(sampleButton)
+                        .scan(0, add);
 
-	totalGraph.attr({
-		fill: "fa44451",
-		stroke:'none'
-	})
+    // Update graph
+    totalWeight
+        .map(toFitMaxKilos)
+        .onValue(setHeightOf(graph.totalWeight));
 
-	var $indiNum = $('#number-individual');
-	var $totalNum = $('#number-total');
-	
-	var socket = io.connect();
-	socket.on("grams", function (data) {
-		
-		var weight = parseFloat(data.toString(), 10);
-	
-		if(_.isNaN(weight) || weight<0 || !_.isNumber(weight)){
-			return;
-		}
-		console.log(weight);
-		var y = weight;
-		var nHeight = size.height - y;
-
-	  	
-		if (_.isNaN(y) || _.isNaN(nHeight) || y<0 || nHeight<0 || !_.isNumber(nHeight)) {
-			return;
-		}
-
-		$indiNum.text(y.toFixed(2));
-		indi.animate({
-			y: nHeight,
-			height: size.height - nHeight
-		}, 200, "easeIn");
-
-		total += y/(maxWeight/size.height);
-
-		$totalNum.text((totalGrams+=y).toFixed(2)+"/4000");
-		totalGraph.animate({
-			y: size.height - total,
-			height: total
-		},200,"easeIn");
-		
-
-		console.log(total)
-	});
+    // Update text for total weight
+    totalWeight.assign($totalNum, "text");
 });
 
 require(["Analytics/AnalyticsExtra"]);
