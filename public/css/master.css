@@ -211,6 +211,11 @@ html, body {
     background-color: #297F79;
 }
 
+.qualification .infoline {
+                margin-top: 300px;
+            margin-left: 30px;
+}
+
     .qualificationevents {
         overflow: auto;
     }
@@ -294,7 +299,6 @@ html, body {
             display: block;
             margin: 0 auto;
             width: 70%;
-            border-bottom: 1px solid #999;
             padding-bottom: 5px;
 
             text-align: center;
@@ -359,7 +363,6 @@ html, body {
             font-size: 12px;
             text-align: center;
             padding-bottom: 10px;
-            border-bottom: 1px solid #999;
             width: 70%;
             margin: 0 auto 10px auto;
         }
@@ -412,12 +415,18 @@ html, body {
         .infoline:nth-child(2n) {
             padding-left: 10px;
         }
+
+        #number-total {
+            font-size: 40px;
+        }
+
         .infoline .number {
             font-size: 100px;
             line-height: 100%;
             color: #FD5158;
             vertical-align: baseline;
             padding-top: 10px;
+            margin-left: 30px;
         }
 
         .infoline .label {
