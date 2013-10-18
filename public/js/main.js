@@ -55,7 +55,7 @@ require(["socketio", "raphael", "underscore", "jquery"], function(io, Raphael, _
 	var $totalNum = $('#number-total');
 	
 	var socket = io.connect();
-	socket.on("data", function (data) {
+	socket.on("grams", function (data) {
 		
 		var weight = parseFloat(data.toString(), 10);
 	
