@@ -17,8 +17,8 @@ requirejs.config({
 });
 
 var size = {
-    width: 100,
-    height: 200
+    width: 330,
+    height: 300
 };
 
 /****
@@ -31,7 +31,7 @@ require(["socketio", "raphael", "underscore", "jquery"], function(io, Raphael, _
 		indi = paper.rect(0, size.height, size.width, 0);
 	// Color the rectangle nicely
 	indi.attr({
-	    fill:'#289CFE',
+	    fill:'#dadada',
 	    stroke:'none'
 	});
 
