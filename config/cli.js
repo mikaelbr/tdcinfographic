@@ -1,3 +1,3 @@
 module.exports = {
-	cliPath: __dirname + '/../scale.py'
+	cliPath: __dirname + '/../test.py'
 };
