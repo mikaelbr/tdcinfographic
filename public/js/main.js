@@ -56,11 +56,18 @@ require(["socketio", "raphael", "underscore", "jquery"], function(io, Raphael, _
 	
 	var socket = io.connect();
 	socket.on("data", function (data) {
-		var y = parseFloat(data.toString(), 10);
+		
+		var weight = parseFloat(data.toString(), 10);
+	
+		if(_.isNaN(weight) || weight<0 || !_.isNumber(weight)){
+			return;
+		}
+		console.log(weight);
+		var y = weight;
 		var nHeight = size.height - y;
 
-
-		if (y=="NaN" || !_.isNumber(nHeight) || !_.isNumber(y) || y < 0 || nHeight < 0) {
+	  	
+		if (_.isNaN(y) || _.isNaN(nHeight) || y<0 || nHeight<0 || !_.isNumber(nHeight)) {
 			return;
 		}
 
