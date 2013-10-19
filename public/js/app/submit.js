@@ -6,10 +6,11 @@ require([
     ]
     , function(io, _, $, Bacon) {
 
-    var socket = io.connect()
-      , onClick = $(".button").asEventStream('click');
-
-    onClick // Todo: throttle-esc
+    var socket = io.connect();
+    $(".button")
+        .asEventStream('click')
+        .doAction(".preventDefault")
+        .debounceImmediate(1000)
         .onValue(function () {
             socket.emit('sample');
         });
