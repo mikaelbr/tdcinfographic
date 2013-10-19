@@ -23,6 +23,10 @@ io.sockets.on('connection', function (socket) {
         // broadcast to other clients..
         socket.broadcast.emit('grams', grams);
     });
+
+    socket.on('sample', function () {
+        socket.broadcast.emit('sample');
+    });
 });
 
 server.listen(process.env.PORT || 3000);

@@ -1,4 +1,4 @@
-define(['raphael', 'size'], function (Raphael, size) {
+define(['raphael', 'app/size'], function (Raphael, size) {
     var paper = Raphael("graph-individual", size.width, size.height),
         indi = paper.rect(0, size.height, size.width, 0);
 

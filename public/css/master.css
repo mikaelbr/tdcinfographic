@@ -35,7 +35,7 @@ html, body {
 
     height: 17px;
     width: 75px;
-    
+
     /*background-image: url("../media/bekk-logo-white.png");*/
     background-image: url("../media/bekk-logo-white.png");
     /*background-image: url(http://open.bekk.no/Content/Images/BEKK_logo.png);*/
@@ -51,13 +51,32 @@ html, body {
     margin: -110px auto;
     width: 200px;
     height: 200px;
-    text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
     background-size: 200px 200px;
     background-position: center;
     background-repeat: no-repeat;
+    text-indent: 100%;
 }
+
+.button {
+    display: block;
+    text-indent: 0;
+    background: #fd5158;
+    border-radius: 150px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 65px 0;
+    font-size: 3em;
+    font-weight: bold;
+
+    border: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.button:hover {
+    border: 4px solid rgba(255, 255, 255, 0.9);
+}
+
 
 .headergfx {
     width: 100%;
@@ -73,6 +92,10 @@ html, body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+}
+
+.button-site {
+    height: 350px;
 }
     .headergfx.raster:after {
         content: "";
@@ -90,6 +113,7 @@ html, body {
     .headergfx.vippetangen {
         background-image: url("../media/trondheim.jpg");
     }
+
 
         .headergfx.canvas canvas {
             top: 0;
@@ -314,7 +338,7 @@ html, body {
             margin-top: 10px;
             padding-bottom: 5px;
             text-align: center;
-            
+
             font-family: "Fedra Serif B Book",Georgia;
             font-style: italic;
             text-transform: uppercase;
@@ -347,7 +371,7 @@ html, body {
         background-color: #f1f1f1;
         color: #1f1f1f;
     }
-        .finalistspubdate .teamscount, 
+        .finalistspubdate .teamscount,
         .finalistspubdate .datetext {
             display: block;
         }
@@ -390,7 +414,7 @@ html, body {
         -webkit-box-sizing: border-box;
            -moz-box-sizing: border-box;
                 box-sizing: border-box;
-        
+
     }
         .infoline:after {
             content: "";
@@ -399,14 +423,14 @@ html, body {
             height: 1px;
             bottom: 0;
             left: 0;
-            
+
             background-color: #3c3c3c;
             border-right: 10px solid #262626;
 
             -webkit-box-sizing: border-box;
                -moz-box-sizing: border-box;
                     box-sizing: border-box;
-            
+
         }
         .infoline:nth-child(2n):after {
             border-right: 0;
@@ -446,7 +470,7 @@ html, body {
 
             font-family: 'Cedarville Cursive', cursive;
             color: white;
-        
+
             font-size: 26px;
 
             -webkit-transform: rotate(-30deg);
@@ -467,7 +491,7 @@ html, body {
         top: -8px;
         font-size: 50px;
         font-weight: normal;
-        
+
         -webkit-transform: rotate(50deg);
         -moz-transform: rotate(50deg);
         -o-transform: rotate(50deg);
@@ -488,7 +512,7 @@ html, body {
     }
         .finalevent .time {
             display: block;
-            
+
             line-height: 100%;
             font-size: 40px;
             font-weight: normal;
@@ -527,28 +551,28 @@ html, body {
     }
         .sociallink.facebooklink:hover,
         .sociallink.facebooklink:focus {
-            background-image: url("../media/facebook-white.png");   
+            background-image: url("../media/facebook-white.png");
         }
     .sociallink.twitterlink {
         background-image: url("../media/twitter-turquoise.png");
     }
         .sociallink.twitterlink:hover,
         .sociallink.twitterlink:focus {
-            background-image: url("../media/twitter-white.png");   
+            background-image: url("../media/twitter-white.png");
         }
     .sociallink.maillink {
         background-image: url("../media/mail-turquoise.png");
     }
         .sociallink.maillink:hover,
         .sociallink.maillink:focus {
-            background-image: url("../media/mail-white.png");   
+            background-image: url("../media/mail-white.png");
         }
     .sociallink.uxcuplink {
         background-image: url("../media/uxcup2013-pink.png");
     }
         .sociallink.uxcuplink:hover,
         .sociallink.uxcuplink:focus {
-            background-image: url("../media/uxcup2013-white.png");   
+            background-image: url("../media/uxcup2013-white.png");
         }
 
 
@@ -681,15 +705,15 @@ html, body {
 
         .footersociallinks .sociallink.facebooklink:hover,
         .footersociallinks .sociallink.facebooklink:focus {
-            background-image: url("../media/facebook-black.png");   
+            background-image: url("../media/facebook-black.png");
         }
 
         .footersociallinks .sociallink.twitterlink:hover,
         .footersociallinks .sociallink.twitterlink:focus {
-            background-image: url("../media/twitter-black.png");   
+            background-image: url("../media/twitter-black.png");
         }
 
         .footersociallinks .sociallink.maillink:hover,
         .footersociallinks .sociallink.maillink:focus {
-            background-image: url("../media/mail-black.png");   
+            background-image: url("../media/mail-black.png");
         }
