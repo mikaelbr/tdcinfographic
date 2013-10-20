@@ -3,7 +3,7 @@ define(['raphael', 'app/size'], function (Raphael, size) {
         indi = paper.rect(0, size.height, size.width, 0);
 
     var papertotal = Raphael("graph-total",size.width,size.height);
-        var rect = papertotal.rect(0, 0, 330, 350);
+        var rect = papertotal.rect(0, 0, size.width, size.height);
         rect.attr("fill", "#636363");
         totalGraph = papertotal.rect(0,size.height,size.width,0);
 
