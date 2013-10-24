@@ -39,11 +39,19 @@ define([
     incremented.assign($indiNum, "text");
 
 
+    var initialWeight = Bacon.fromPromise($.getJSON('/total'))
+                            .map(function (data) {
+                                return data.value;
+                            })
+                            .filter(_.isNumber);
+
     // Handle total weight.
-    var totalWeight = incremented
-                        .toProperty("")
+    var addedWeight = incremented
+                        .toProperty(0)
                         .sampledBy(accumulation)
                         .scan(0, add);
+
+    var totalWeight = initialWeight.combine(addedWeight, add);
 
     // Update graph
     totalWeight

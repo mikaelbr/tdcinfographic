@@ -1,13 +1,31 @@
 var http = require('http');
-var fs = require('fs');
+var storage = require('./storage');
 
 var ecstatic = require('ecstatic');
 
-var server = http.createServer(ecstatic({
+var total = {
+    value: 0
+}
+, currentValue = 0;
+
+var staticServer = ecstatic({
     root: __dirname + '/public',
     autoIndex: true,
     gzip: true
-}));
+});
+
+storage.read(function (stored) {
+    total = stored;
+});
+
+var server = http.createServer(function (req, res) {
+    if(/^\/total$/.test(req.url)) {
+        res.setHeader('content-type', 'application/json');
+        return res.end(JSON.stringify(total));
+    }
+
+    return staticServer(req, res);
+});
 
 var io = require('socket.io').listen(server);
 io.set('log level', false)
@@ -20,11 +38,15 @@ io.sockets.on('connection', function (socket) {
             console.error("No valid data", data);
             return;
         }
+
+        currentValue = grams;
         // broadcast to other clients..
         socket.broadcast.emit('grams', grams);
     });
 
     socket.on('sample', function () {
+        total.value += currentValue;
+        storage.write(total);
         socket.broadcast.emit('sample');
     });
 });
