@@ -19,6 +19,10 @@ html, body {
     /*min-height: 600px;*/
 }
 
+#title-message {
+    font-size: 60px;
+    text-align: center;
+}
 
 .logo {
     text-indent: 100%;
