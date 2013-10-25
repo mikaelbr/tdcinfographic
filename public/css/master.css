@@ -114,6 +114,12 @@ html, body {
         background-image: url("../media/trondheim.jpg");
     }
 
+@media all (max-width: 900px) {
+    .headergfx.vippetangen {
+        background-image: url("../media/trondheim_small.jpg");
+    }
+}
+
 
         .headergfx.canvas canvas {
             top: 0;
