@@ -8,16 +8,18 @@ define([
 
         var list = new Array("Vi er tverrfaglige","Vi drar på konferanser","Vi skaper løsninger i team");
 
-        var count = 1;
+        var count = 0;
 
         var text = $("#title-message").html(list[0]);
 
         setInterval(function(){
-        	 text.fadeOut( "slow", function() {
-    			text.hide().html(list[count == list.length ? 0 : count++]).fadeIn(400);
+        	 text.fadeOut(500, function() {
+        	 	count++;
+        	 	if(count == list.length)count=0;
+    			text.html(list[count]).fadeIn(500);
   			});
        		
-        },5000);
+        },10000);
         
 
 });

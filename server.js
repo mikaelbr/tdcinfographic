@@ -31,7 +31,9 @@ var io = require('socket.io').listen(server);
 
 // Get weight through WS from server and pass on to clients
 io.sockets.on('connection', function (socket) {
+    console.log("connected");
     socket.on('weight', function (data) {
+        console.log("weight" + data);
         var grams = parseFloat(data.grams, 10);
         if (!data.grams || typeof grams !== "number") {
             console.error("No valid data", data);
@@ -44,6 +46,7 @@ io.sockets.on('connection', function (socket) {
     });
 
     socket.on('sample', function () {
+        console.log("sample");
         total.value += currentValue;
         storage.write(total);
         socket.broadcast.emit('sample');
