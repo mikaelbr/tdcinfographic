@@ -17,6 +17,10 @@ html, body {
 	opacity: 0;
 }
 
+.final {
+	display: none;
+}
+
 .sections .section {
 	margin-bottom: 40px;
 	width: 100%;

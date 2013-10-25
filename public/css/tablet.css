@@ -10,6 +10,10 @@ body {
 
 }
 
+#title-message {
+	font-size: 40px;
+}
+
 .sectionswrap {
     width: 100%;
 }
@@ -108,7 +112,6 @@ body {
 	width: 100%;
 	padding-bottom: 0;
 	margin-left: 0;
-	border-bottom: 1px solid #3c3c3c;
 }
 
 .section {
