@@ -28,7 +28,6 @@ var server = http.createServer(function (req, res) {
 });
 
 var io = require('socket.io').listen(server);
-io.set('log level', false)
 
 // Get weight through WS from server and pass on to clients
 io.sockets.on('connection', function (socket) {
