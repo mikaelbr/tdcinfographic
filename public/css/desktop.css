@@ -3,7 +3,7 @@ html, body {
 }
 
 .sectionswrap {
-    height: 495px;
+    margin-bottom: 20px;
 }
 
 
@@ -96,7 +96,7 @@ html, body {
         width: 100%;
         right: 50%;
         margin-right: -550px;
-        
+
         font-family: "Conduit ITC W01 Light", Arial, sans-serif;
     }
     .maplabel:after {

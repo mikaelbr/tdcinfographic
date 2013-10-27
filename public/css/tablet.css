@@ -10,6 +10,10 @@ body {
 
 }
 
+.headergfx.vippetangen {
+    background-image: url("../media/trondheim_small.jpg");
+}
+
 #title-message {
 	font-size: 40px;
 }
@@ -49,7 +53,7 @@ body {
 		float: left;
 		width: 33.33%;
 		padding-right: 20px;
-	
+
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
