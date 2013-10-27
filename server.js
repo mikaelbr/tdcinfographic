@@ -4,7 +4,9 @@ var storage = require('./storage');
 var ecstatic = require('ecstatic');
 
 var total = {
-    value: 0
+    value: 0,
+    numRegistered: 0,
+    measurements: []
 }
 , currentValue = 0;
 
@@ -48,6 +50,8 @@ io.sockets.on('connection', function (socket) {
     socket.on('sample', function () {
         console.log("sample");
         total.value += currentValue;
+        total.numRegistered += 1;
+        total.measurements.push([total.numRegistered, currentValue]);
         storage.write(total);
         socket.broadcast.emit('sample');
     });
