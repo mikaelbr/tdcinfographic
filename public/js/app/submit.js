@@ -41,7 +41,7 @@ require([
             return isValid ? "disabled" : "enabled";
         })
         .assign($buttonWrapper, "attr", "class");
-    valid.assign($maxWeightNotice, "toggle");
+    valid.toProperty(false).assign($maxWeightNotice, "toggle");
 
 
     // Show/Hide thank you message
