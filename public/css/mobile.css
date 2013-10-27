@@ -1,6 +1,6 @@
 
 html, body {
-	
+
 }
 
 .headergfx {
@@ -24,15 +24,12 @@ html, body {
 .sections .section {
 	margin-bottom: 40px;
 	width: 100%;
+    margin-top: 50px;
 }
 
 .section.sociallinks .sectiontitle {
 	float: left;
 	display: block;
-}
-
-.section.sociallinks {
-	margin-top: 0;
 }
 
 .sectioncontent {

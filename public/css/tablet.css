@@ -46,6 +46,11 @@ body {
     background-color: #272727;
     text-align: center;
 }
+
+.section.sociallinks h3 {
+    text-align: center;
+}
+
 .section.sociallinks .sectiontitle {
     display: inline-block;
     float: none;
