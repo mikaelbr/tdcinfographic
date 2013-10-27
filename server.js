@@ -35,7 +35,7 @@ io.sockets.on('connection', function (socket) {
     socket.on('weight', function (data) {
         console.log("weight" + data);
         var grams = parseFloat(data.grams, 10);
-        if (!data.grams || typeof grams !== "number") {
+        if (typeof grams !== "number") {
             console.error("No valid data", data);
             return;
         }
