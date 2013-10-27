@@ -1,5 +1,7 @@
 .graph {
-	position: absolute;
-	bottom: 0;
-	z-index: -3;
+    position: absolute;
+    bottom: 0;
+    z-index: -3;
+    left: 50%;
+    margin-left: -165px;
 }
