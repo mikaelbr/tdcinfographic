@@ -9,7 +9,7 @@ define([
     , function(io, _, $, Bacon, graph, size) {
 
     // Initiate helpers
-    var maxWeight = 40000
+    var maxWeight = 20000
       , socket = io.connect()
       , $indiNum = $('#number-individual')
       , $totalNum = $('#number-total')
