@@ -57,40 +57,20 @@ html, body {
 }
 
 .sitetitle {
-
     position: relative;
-z-index: 2;
-display: block;
-margin: -98px auto;
-width: 180px;
-height: 180px;
-text-indent: 100%;
-white-space: nowrap;
-overflow: hidden;
-background-image: url("../media/ilovetdc.svg");
-background-size: 100% 100%;
-background-position: center;
-background-repeat: no-repeat;
-}
-
-.button {
+    z-index: 2;
     display: block;
-    text-indent: 0;
-    background: #fd5158;
-    border-radius: 150px;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 65px 0;
-    font-size: 3em;
-    font-weight: bold;
-
-    border: 4px solid rgba(255, 255, 255, 0.5);
+    margin: -98px auto;
+    width: 180px;
+    height: 180px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url("../media/ilovetdc.svg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-.button:hover {
-    border: 4px solid rgba(255, 255, 255, 0.9);
-}
-
 
 .headergfx {
     width: 100%;
@@ -108,31 +88,74 @@ background-repeat: no-repeat;
     overflow: hidden;
 }
 
-.button-site {
+.headergfx.raster:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../media/raster.png");
+    background-repeat: repeat;
+    pointer-events: none;
+}
+
+.headergfx.vippetangen {
+    background-image: url("../media/trondheim.jpg");
+}
+
+.button-site .headergfx{
     height: 350px;
 }
-    .headergfx.raster:after {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../media/raster.png");
-        background-repeat: repeat;
-        pointer-events: none;
-    }
 
-    .headergfx.vippetangen {
-        background-image: url("../media/trondheim.jpg");
-    }
+.button-site .weight-wrapper,
+.button-site .thanks-notice,
+.button-site .max-weight-notice {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.button-site .max-weight-notice,
+.button-site .thanks-notice {
+    font-size: 4em;
+}
+.button-site .max-weight-notice p,
+.button-site .thanks-notice p {
+    font-size: 24px;
+    text-align: center;
+}
+.button-site .infoline {
+    margin-top: 200px;
+}
+
+.button {
+    display: block;
+    text-indent: 0;
+    background: #fd5158;
+    border-radius: 150px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 60px 0;
+    font-size: 3em;
+    font-weight: bold;
+
+    border: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.button:hover {
+    border: 4px solid rgba(255, 255, 255, 0.9);
+}
+
+.disabled .button {
+    background: #262626;
+}
 
 /**
  * Sections
  */
 
-.sectionswrap {
+ .sectionswrap {
     /*position: relative;*/
     width: 1100px;
     margin: 150px auto 0 auto;
@@ -166,8 +189,8 @@ background-repeat: no-repeat;
     overflow: visible;
 
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .wholesectionlink {
@@ -203,15 +226,15 @@ background-repeat: no-repeat;
 
     border-left: 1px solid #3c3c3c;
 }
-    .section:first-of-type .sectioncontent {
-        border-left: 0;
-    }
+.section:first-of-type .sectioncontent {
+    border-left: 0;
+}
 
 
 /**
  * Qualifications
  */
-.qualification .sectiontitle {
+ .qualification .sectiontitle {
     background-color: #297F79;
 }
 
@@ -220,130 +243,130 @@ background-repeat: no-repeat;
     padding-bottom: 14px;
 }
 
-    .qualificationevents {
-        overflow: auto;
-    }
+.qualificationevents {
+    overflow: auto;
+}
 
-    .qualificationevent {
-        float: left;
-        width: 33.33%;
-        padding-left: 5px;
+.qualificationevent {
+    float: left;
+    width: 33.33%;
+    padding-left: 5px;
 
-        -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-                box-sizing: border-box;
-    }
-    .qualificationevent:first-of-type {
-        padding-left: 0;
-    }
-        .qualificationevent .eventlink {
-            display: block;
-            width: 100%;
-            height: 100%;
-            padding: 10px;
-            border: 1px solid #3c3c3c;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.qualificationevent:first-of-type {
+    padding-left: 0;
+}
+.qualificationevent .eventlink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #3c3c3c;
 
-            color: #f1f1f1;
-            font-family: 'Conduit ITC W01 Light', Arial, sans-serif;
+    color: #f1f1f1;
+    font-family: 'Conduit ITC W01 Light', Arial, sans-serif;
 
-            -webkit-box-sizing: border-box;
-               -moz-box-sizing: border-box;
-                    box-sizing: border-box;
-        }
-            .qualificationevent .eventlink:hover,
-            .qualificationevent .eventlink:active {
-                background-color: #f1f1f1;
-                color: #1f1f1f;
-                border-color: #f1f1f1;
-            }
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.qualificationevent .eventlink:hover,
+.qualificationevent .eventlink:active {
+    background-color: #f1f1f1;
+    color: #1f1f1f;
+    border-color: #f1f1f1;
+}
 
-        .qualificationevent .school,
-        .qualificationevent .time,
-        .qualificationevent .location {
-            display: block;
-        }
+.qualificationevent .school,
+.qualificationevent .time,
+.qualificationevent .location {
+    display: block;
+}
 
-        .qualificationevent .school {
-            font-size: 0.82em;
-        }
+.qualificationevent .school {
+    font-size: 0.82em;
+}
 
-        .qualificationevent .time {
-            font-size: 18px;
-            font-weight: bold;
-        }
+.qualificationevent .time {
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        .qualificationevent .location {
-            text-transform: uppercase;
-            font-size: 12px;
-        }
+.qualificationevent .location {
+    text-transform: uppercase;
+    font-size: 12px;
+}
 
 
-    .signup {
-        position: relative;
-        margin-bottom: 20px;
-        overflow: hidden;
-        padding: 10px;
-        padding-top: 10px;
-        border: 0;
+.signup {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 10px;
+    padding-top: 10px;
+    border: 0;
 
-        background-color: #f1f1f1;
-        color: #1f1f1f;
+    background-color: #f1f1f1;
+    color: #1f1f1f;
 
-        font-family: 'Conduit ITC W01 Light',Arial;
-    }
-        .signup .signuplabel {
-            display: block;
-            text-align: center;
+    font-family: 'Conduit ITC W01 Light',Arial;
+}
+.signup .signuplabel {
+    display: block;
+    text-align: center;
 
-            font-size: 12px;
-            text-transform: uppercase;
-        }
+    font-size: 12px;
+    text-transform: uppercase;
+}
 
-        .signup .signuptime {
-            display: block;
-            margin: 0 auto;
-            width: 70%;
-            padding-bottom: 5px;
+.signup .signuptime {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    padding-bottom: 5px;
 
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
-            .signup .signuptime .time {
-                font-weight: normal;
-                font-size: 14px;
-            }
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.signup .signuptime .time {
+    font-weight: normal;
+    font-size: 14px;
+}
 
-        .signup .signuptitle {
-            margin-top: 10px;
-            padding-bottom: 5px;
-            text-align: center;
+.signup .signuptitle {
+    margin-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
 
-            font-family: "Fedra Serif B Book",Georgia;
-            font-style: italic;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-            .signup:hover .signuptitle {
-                color: #297F79;
-            }
+    font-family: "Fedra Serif B Book",Georgia;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.signup:hover .signuptitle {
+    color: #297F79;
+}
 
-        .signup .signuplink {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: block;
-            top: 0;
-            left: 0;
-            white-space: nowrap;
-            text-indent: 100%;
-            overflow: hidden;
-        }
+.signup .signuplink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
 
     /**
      * "Vinnerene kåres den..."
      */
-    .finalistspubdate {
+     .finalistspubdate {
         clear: both;
         padding: 25px 20px 20px 20px;
         margin-top: 20px;
@@ -351,25 +374,25 @@ background-repeat: no-repeat;
         background-color: #f1f1f1;
         color: #1f1f1f;
     }
-        .finalistspubdate .teamscount,
-        .finalistspubdate .datetext {
-            display: block;
-        }
+    .finalistspubdate .teamscount,
+    .finalistspubdate .datetext {
+        display: block;
+    }
 
-        .finalistspubdate .datetext {
-            font-style: italic;
-            font-size: 14px;
-            text-align: center;
-            text-transform: uppercase;
-        }
+    .finalistspubdate .datetext {
+        font-style: italic;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+    }
 
-        .finalistspubdate .teamscount {
-            font-size: 12px;
-            text-align: center;
-            padding-bottom: 10px;
-            width: 70%;
-            margin: 0 auto 10px auto;
-        }
+    .finalistspubdate .teamscount {
+        font-size: 12px;
+        text-align: center;
+        padding-bottom: 10px;
+        width: 70%;
+        margin: 0 auto 10px auto;
+    }
 
 
 
@@ -379,192 +402,192 @@ background-repeat: no-repeat;
 
 
 
-.final .sectiontitle {
+ .final .sectiontitle {
     background-color: #FD5158;
 }
 
-    .infoline {
-        position: relative;
-        width: 100%;
-        margin-top: 250px;
-        float: left;
+.infoline {
+    position: relative;
+    width: 100%;
+    margin-top: 250px;
+    float: left;
 
-        font-family: 'Conduit ITC W01 Light',Arial;
+    font-family: 'Conduit ITC W01 Light',Arial;
 
-        -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-                box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
-    }
-        .infoline:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: 0;
-            left: 0;
+}
+.infoline:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
 
-            background-color: #3c3c3c;
-            border-right: 10px solid #262626;
+    background-color: #3c3c3c;
+    border-right: 10px solid #262626;
 
-            -webkit-box-sizing: border-box;
-               -moz-box-sizing: border-box;
-                    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 
-        }
-        .infoline:nth-child(2n):after {
-            border-right: 0;
-            border-left: 10px solid #262626;
-        }
-        .infoline:nth-child(2n) {
-            padding-left: 10px;
-        }
+}
+.infoline:nth-child(2n):after {
+    border-right: 0;
+    border-left: 10px solid #262626;
+}
+.infoline:nth-child(2n) {
+    padding-left: 10px;
+}
 
-        #number-total {
-            font-size: 40px;
-        }
+#number-total {
+    font-size: 40px;
+}
 
-        .infoline .number {
-            font-size: 100px;
-            line-height: 100%;
-            color: #FD5158;
-            vertical-align: baseline;
-            padding-top: 10px;
-            margin-left: 30px;
-        }
+.infoline .number {
+    font-size: 100px;
+    line-height: 100%;
+    color: #FD5158;
+    vertical-align: baseline;
+    padding-top: 10px;
+    margin-left: 30px;
+}
 
-        .infoline .label {
-            text-transform: uppercase;
-            color: #FD5158;
-            margin-left: 10px;
+.infoline .label {
+    text-transform: uppercase;
+    color: #FD5158;
+    margin-left: 10px;
 
-            vertical-align: baseline;
-        }
+    vertical-align: baseline;
+}
 
 
-        .infoline .edit {
-            position: absolute;
-            top: -8px;
-            left: 55px;
-            z-index: 1000;
+.infoline .edit {
+    position: absolute;
+    top: -8px;
+    left: 55px;
+    z-index: 1000;
 
-            font-family: 'Cedarville Cursive', cursive;
-            color: white;
+    font-family: 'Cedarville Cursive', cursive;
+    color: white;
 
-            font-size: 26px;
+    font-size: 26px;
 
-            -webkit-transform: rotate(-30deg);
-            -moz-transform: rotate(-30deg);
-            -o-transform: rotate(-30deg);
-            -ms-transform: rotate(-30deg);
-            transform: rotate(-30deg);
-        }
-        .infoline .edit.edit2 {
-            left: 30px;
-            top: -5px
-        }
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+.infoline .edit.edit2 {
+    left: 30px;
+    top: -5px
+}
 
-    .infoline .edit:before {
-        content: "/";
-        position: absolute;
-        left: -40px;
-        top: -8px;
-        font-size: 50px;
-        font-weight: normal;
+.infoline .edit:before {
+    content: "/";
+    position: absolute;
+    left: -40px;
+    top: -8px;
+    font-size: 50px;
+    font-weight: normal;
 
-        -webkit-transform: rotate(50deg);
-        -moz-transform: rotate(50deg);
-        -o-transform: rotate(50deg);
-        -ms-transform: rotate(50deg);
-        transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+    -moz-transform: rotate(50deg);
+    -o-transform: rotate(50deg);
+    -ms-transform: rotate(50deg);
+    transform: rotate(50deg);
 
-        text-shadow: 1px 0 0 rgba(0, 0, 0, 0.5);
-    }
-    .infoline .edit.edit2:before {
-        left: -35px;
-    }
+    text-shadow: 1px 0 0 rgba(0, 0, 0, 0.5);
+}
+.infoline .edit.edit2:before {
+    left: -35px;
+}
 
-    .finalevent {
-        clear: both;
-        padding-top: 20px;
+.finalevent {
+    clear: both;
+    padding-top: 20px;
 
-        font-family: 'Conduit ITC W01 Light',Arial;
-    }
-        .finalevent .time {
-            display: block;
+    font-family: 'Conduit ITC W01 Light',Arial;
+}
+.finalevent .time {
+    display: block;
 
-            line-height: 100%;
-            font-size: 40px;
-            font-weight: normal;
-            text-align: center;
-        }
-        .finalevent .location {
-            display: block;
-            text-transform: uppercase;
-            text-align: center;
-            margin-top: 7px;
-        }
+    line-height: 100%;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+}
+.finalevent .location {
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 7px;
+}
 
 /**
  * News
  */
-    .section.sociallinks {
-        width: 20%;
-    }
+ .section.sociallinks {
+    width: 20%;
+}
 
 
-    .section .section-title {
-        position: absolute;
-        top: 355px;
-        left: 55px !important;
-        z-index: 2;
-        left: 0;
-        font-size: 22px;
-    }
+.section .section-title {
+    position: absolute;
+    top: 355px;
+    left: 55px !important;
+    z-index: 2;
+    left: 0;
+    font-size: 22px;
+}
 
-    .sociallinks .sectiontitle {
+.sociallinks .sectiontitle {
 
-    }
+}
 
-    .sociallink {
-        margin-bottom: 10px;
-        display: block;
-        padding-left: 40px;
-        line-height: 32px;
-        height: 32px;
-        background-size: 32px 32px;
-        background-position: left center;
-        background-repeat: no-repeat;
-        border: 0;
-    }
-    .sociallink.facebooklink {
-        background-image: url("../media/facebook-turquoise.png");
-    }
-        .sociallink.facebooklink:hover,
-        .sociallink.facebooklink:focus {
-            background-image: url("../media/facebook-white.png");
-        }
-    .sociallink.twitterlink {
-        background-image: url("../media/twitter-turquoise.png");
-    }
-        .sociallink.twitterlink:hover,
-        .sociallink.twitterlink:focus {
-            background-image: url("../media/twitter-white.png");
-        }
-    .sociallink.maillink {
-        background-image: url("../media/mail-turquoise.png");
-    }
-        .sociallink.maillink:hover,
-        .sociallink.maillink:focus {
-            background-image: url("../media/mail-white.png");
-        }
-    .sociallink.uxcuplink {
-        background-image: url("../media/uxcup2013-pink.png");
-    }
-        .sociallink.uxcuplink:hover,
-        .sociallink.uxcuplink:focus {
-            background-image: url("../media/uxcup2013-white.png");
-        }
+.sociallink {
+    margin-bottom: 10px;
+    display: block;
+    padding-left: 40px;
+    line-height: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+.sociallink.facebooklink {
+    background-image: url("../media/facebook-turquoise.png");
+}
+.sociallink.facebooklink:hover,
+.sociallink.facebooklink:focus {
+    background-image: url("../media/facebook-white.png");
+}
+.sociallink.twitterlink {
+    background-image: url("../media/twitter-turquoise.png");
+}
+.sociallink.twitterlink:hover,
+.sociallink.twitterlink:focus {
+    background-image: url("../media/twitter-white.png");
+}
+.sociallink.maillink {
+    background-image: url("../media/mail-turquoise.png");
+}
+.sociallink.maillink:hover,
+.sociallink.maillink:focus {
+    background-image: url("../media/mail-white.png");
+}
+.sociallink.uxcuplink {
+    background-image: url("../media/uxcup2013-pink.png");
+}
+.sociallink.uxcuplink:hover,
+.sociallink.uxcuplink:focus {
+    background-image: url("../media/uxcup2013-white.png");
+}
 
 
 
@@ -580,41 +603,41 @@ background-repeat: no-repeat;
 /**
  * Profiles
  */
-.profileimages {
+ .profileimages {
     overflow: auto;
     margin: 20px -10px 0 -10px;
 }
 
-    .profileimageslabel {
-        /*visibility: hidden;*/
-        display: block;
-        font-family: 'Conduit ITC W01 Light',Arial;
-        font-size: 14px;
-        color: #939393;
-        padding-left: 10px;
-    }
-        /*.profileimages:hover .profileimageslabel {
-            visibility: visible;
-        }*/
+.profileimageslabel {
+    /*visibility: hidden;*/
+    display: block;
+    font-family: 'Conduit ITC W01 Light',Arial;
+    font-size: 14px;
+    color: #939393;
+    padding-left: 10px;
+}
+/*.profileimages:hover .profileimageslabel {
+visibility: visible;
+}*/
 
-    .profile {
-        float: left;
-        margin: 10px 10px 0 10px;
-    }
+.profile {
+    float: left;
+    margin: 10px 10px 0 10px;
+}
 
-    .profileimage {
-        width: 68px;
-        height: 68px;
-        border-radius: 50%;
-    }
+.profileimage {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+}
 
-    .profilename {
-        display: block;
-        text-align: center;
-        font-family: 'Conduit ITC W01 Light',Arial;
-        font-size: 12px;
-        text-transform: uppercase;
-    }
+.profilename {
+    display: block;
+    text-align: center;
+    font-family: 'Conduit ITC W01 Light',Arial;
+    font-size: 12px;
+    text-transform: uppercase;
+}
 
 
 
@@ -639,29 +662,29 @@ background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-    .priceimage {
-        visibility: hidden;
-        width: 100%;
-    }
+.priceimage {
+    visibility: hidden;
+    width: 100%;
+}
 
-    .priceimagecontainer:after {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("../media/raster.png");
-        background-repeat: repeat;
-    }
+.priceimagecontainer:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../media/raster.png");
+    background-repeat: repeat;
+}
 
-    .pricebox {
-        background-color: #1f1f1f;
+.pricebox {
+    background-color: #1f1f1f;
 
-        /*font-family: 'Conduit ITC W01 Light',Arial;*/
-        color: #f1f1f1;
-    }
+    /*font-family: 'Conduit ITC W01 Light',Arial;*/
+    color: #f1f1f1;
+}
 
 .uxlxlogo {
     text-indent: 100%;
@@ -685,26 +708,26 @@ background-repeat: no-repeat;
     position: absolute;
     z-index: 1;
 }
-    .footersociallinks .sociallink {
-        display: inline-block;
-        width: 0;
-        text-indent: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        margin: 0 15px 10px 15px;
-    }
+.footersociallinks .sociallink {
+    display: inline-block;
+    width: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 15px 10px 15px;
+}
 
-        .footersociallinks .sociallink.facebooklink:hover,
-        .footersociallinks .sociallink.facebooklink:focus {
-            background-image: url("../media/facebook-black.png");
-        }
+.footersociallinks .sociallink.facebooklink:hover,
+.footersociallinks .sociallink.facebooklink:focus {
+    background-image: url("../media/facebook-black.png");
+}
 
-        .footersociallinks .sociallink.twitterlink:hover,
-        .footersociallinks .sociallink.twitterlink:focus {
-            background-image: url("../media/twitter-black.png");
-        }
+.footersociallinks .sociallink.twitterlink:hover,
+.footersociallinks .sociallink.twitterlink:focus {
+    background-image: url("../media/twitter-black.png");
+}
 
-        .footersociallinks .sociallink.maillink:hover,
-        .footersociallinks .sociallink.maillink:focus {
-            background-image: url("../media/mail-black.png");
-        }
+.footersociallinks .sociallink.maillink:hover,
+.footersociallinks .sociallink.maillink:focus {
+    background-image: url("../media/mail-black.png");
+}

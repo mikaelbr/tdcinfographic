@@ -32,12 +32,28 @@
     <meta name="apple-mobile-web-app-title" content="">
     <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 </head>
-<body>
+<body class="button-site">
 
     <h1 class="logo">BEKK</h1>
-    <div class="headergfx raster vippetangen button-site">
+    <div class="headergfx raster vippetangen"></div>
+    <div id="button-wrapper">
+        <a href="#" class="sitetitle button">POST</a>
     </div>
-    <a href="#" class="sitetitle button">POST</a>
+
+    <div class="weight-wrapper">
+        <div class="infoline">
+            <strong class="number" id="number-individual">0</strong>
+            <span class="label">gram</span>
+        </div>
+    </div>
+
+    <div class="max-weight-notice">
+        <p>Pass på vekta!</p>
+    </div>
+
+    <div class="thanks-notice">
+        <p>Takk!</p>
+    </div>
 
     <script type="text/javascript" src="js/require.js" data-main="js/button"></script>
 </body>
